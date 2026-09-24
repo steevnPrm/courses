@@ -18,7 +18,7 @@ une adresse à un type LONG (64 bits)
 * L'opératuer & permet d'accéder à l'adresse mémoire
   * son retour est une constante, elle ne peut pas être modifé par une affectation <br>`variable = expression`
 
-* un pointeur est un objet dont la valeur est égale à l'adresse mémoire.
+* un pointeur est un objet dont la valeur est égale à l'adresse mémoire ciblée.
   * `type *foo`
 
 ```mermaid
@@ -39,14 +39,14 @@ Exemple type :
 main()
 {
     int i = 3;
-    int *p;
+    int *p; //contiendra la valeur associé à l'adresse mémoire i, c'est donc un *int*
 
-    p = &i;
+    p = &i; //contient l'adresse mémoire de i
     printf("*p = %d \n, *p");
 }
 ```
 
-|name|type|e|
+|name|type|valeur|
 |--|--|--|
 |i|int|3|
 |*p|int|3 (accède à l'adresse mémoire contenu dans p)|
